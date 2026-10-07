@@ -163,3 +163,18 @@ const bezpiecznaAktualizacja = {
 
 const gleboka = structuredClone(oryginal);
 gleboka.tagi.push('CSS');
+
+//zadanie 8
+const produkty = [
+  {nazwa: 'Mysz', cena: 80, dostepny: true},
+  {nazwa: 'Pad', cena: 150, dostepny: false},
+  {nazwa: 'Kabel', cena: 30, dostepny: true}
+];
+
+function przygotujListe(produkty, maxCena) {
+  const tablica = produkty.filter(produkt => produkt.dostepny && produkt.cena <= maxCena);
+  tablica.sort((a, b) => a.cena - b.cena);
+  return tablica.map(produkt => produkt.nazwa);
+}
+
+console.log(przygotujListe(produkty, 100));

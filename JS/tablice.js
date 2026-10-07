@@ -63,7 +63,7 @@ console.log(cenyNetto);
 //zadanie 9
 const produkty = [
   {nazwa: 'Mysz', cena: 80},
-  {naznwa: 'pad', cena: 150},
+  {nazwa: 'pad', cena: 150},
   {nazwa: "Kabel", cena: 30},
 ];
 
