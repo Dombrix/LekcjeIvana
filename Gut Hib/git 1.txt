@@ -1,0 +1,19 @@
+cd ./Documents/Mambo -
+git init - 
+touch 1.txt - 
+ls - 
+git status - 
+git config user.name "Dominik Wycisk" - 
+git config user.email "" - 
+git add 1.txt / git add -A - 
+git commit -m"dodajemy plik 1.txt" - 
+git log - 
+git checkout -b"logowanie" - 
+git branch - 
+git checkout "master" - 
+git merge logowanie - 
+git push - 
+git remote add origin https://github.com/Dombrix/lekcja.git - 
+git branch -M main - 
+git push -u origin main - 
+git pull - 
