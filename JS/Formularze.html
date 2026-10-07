@@ -1,0 +1,67 @@
+<head>
+<style>
+    .widoczny {
+        color: red;
+    }
+</style>
+</head>
+
+<body>
+<form id="form">
+    <label for="tresc">Treść zadania</label>
+    <input id="tresc" type="text">
+    <button type="submit">Dodaj</button>
+    <p id="blad"></p>
+</form>
+
+<ul id="lista"></ul>
+
+<!-- <script src="app.js" defer></script> -->
+<script>
+    const form = document.querySelector('#form');
+    const input = document.querySelector('#tresc');
+    const blad = document.querySelector('#blad');
+    const lista = document.querySelector('#lista');
+    console.log(tresc);
+
+    blad.textContent = 'Wprowadź treść zadania!';
+
+    input.value = '';
+    blad.textContent = '';
+
+    const komunikat = document.querySelector('#blad');
+
+    komunikat.textContent = 'Wprowadź treść zadania!';
+    komunikat.classList.add('widoczny');
+    
+    komunikat.textContent = '';
+    komunikat.classList.remove('widoczny');
+
+    const li = document.createElement('li');
+    li.textContent = 'Nauczyć się DOM';
+    lista.appendChild(li);
+
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        const tresc = input.value.trim();
+        if (tresc === '') {
+            blad.textContent = 'Wprowadź treść zadania!';
+            blad.classList.add('widoczny');
+            return;
+        }
+
+        blad.textContent = '';
+        dodaj(tresc);
+        form.reset();
+
+        input.value = '';
+        console.log('Formularz został przesłany!');
+    });
+
+    function dodaj(tresc) {
+        const li = document.createElement('li');
+        li.textContent = tresc;
+        lista.append(li);
+    }
+</script>
+</body>
