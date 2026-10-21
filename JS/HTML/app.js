@@ -19,20 +19,26 @@ form.addEventListener("submit", (e) => {e.preventDefault();
     blad.textContent = "";
     console.log("Poprawne dane: ", tresc);
 
+
+    
+    dodaj(tresc);
+    form.reset();
+});
+
     let zadania = [];
 
     function dodaj(tresc) {
         const noweZadanie = {
             id: Date.now(),
             tresc: tresc,
+            
         };
 
     zadania.push(noweZadanie);
     console.log(zadania);
+        render();
     }
 
-    dodaj(tresc);
-    form.reset();
 
     function render() {
         lista.textContent = "";
@@ -40,10 +46,7 @@ form.addEventListener("submit", (e) => {e.preventDefault();
         zadania.forEach((zadanie) => {
             const li = document.createElement("li");
             li.textContent = zadanie.tresc;
-            lista.appendChild(li);
+            lista.append(li);
         });
     }
-    render();
-}
-);
 
