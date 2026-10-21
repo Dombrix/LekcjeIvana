@@ -1,0 +1,69 @@
+:root {
+    font-family: system-ui, sans-serif;
+    color: #172033;
+    background-color: #f7f9fc;
+}
+
+body {
+     margin: 0;
+}
+
+main {
+    width: min(680px, calc(100% - 32px));
+    margin: 48px auto;
+}
+
+form, li {
+    padding: 16px;
+    border: 1px solid #d7dee8;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.wiersz, li {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 16px;
+    color: white;
+    background-color: #2563eb;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}   
+
+ul {
+    display: grid;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+}
+
+li span {
+    flex: 1;
+}
+
+li button {
+    background-color: #e11d48;
+}
+
+.blad {
+    min-height: 1.5em;
+    color: #be123c;
+    font-weight: 700;
+}
