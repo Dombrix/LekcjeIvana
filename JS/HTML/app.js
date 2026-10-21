@@ -21,7 +21,7 @@ form.addEventListener("submit", (e) => {e.preventDefault();
 
     let zadania = [];
 
-function dodaj(tresc) {
+    function dodaj(tresc) {
         const noweZadanie = {
             id: Date.now(),
             tresc: tresc,
@@ -33,5 +33,17 @@ function dodaj(tresc) {
 
     dodaj(tresc);
     form.reset();
-});
+
+    function render() {
+        lista.textContent = "";
+
+        zadania.forEach((zadanie) => {
+            const li = document.createElement("li");
+            li.textContent = zadanie.tresc;
+            lista.appendChild(li);
+        });
+    }
+    render();
+}
+);
 
