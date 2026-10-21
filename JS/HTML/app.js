@@ -45,8 +45,24 @@ form.addEventListener("submit", (e) => {e.preventDefault();
 
         zadania.forEach((zadanie) => {
             const li = document.createElement("li");
-            li.textContent = zadanie.tresc;
+            const tekst = document.createElement("Span");
+            const btn = document.createElement("button");
+
+            tekst.textContent = zadanie.tresc;
+            btn.textContent = "Usuń";
+            btn.type = "button";
+
+            btn.addEventListener("click", () => {
+                usun(zadanie.id);
+            });
+
+            li.append(tekst, btn); 
             lista.append(li);
         });
+    }
+
+    function usun(id) {
+        zadania = zadania.filter((zadanie) => zadanie.id !== id);
+        render();
     }
 
