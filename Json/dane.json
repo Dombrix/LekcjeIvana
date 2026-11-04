@@ -1,0 +1,13 @@
+{
+    "id": 12,
+    "nazwa": "Klawiatura",
+    "cena": 149.99,
+    "dostepny": true,
+    "producent": {
+        "nazwa": "KeyPro",
+        "kraj": "PL"
+    },
+    "tagi": ["USB", "mechaniczna"],
+    "promocja": null
+}
+
